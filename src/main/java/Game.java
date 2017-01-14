@@ -14,6 +14,7 @@ public class Game{
   public Game(Canvas canvas){
     this.canvas = canvas;
     this.obj = new ConcreteObject(100,100,300,400,1);
+    this.canvas.addKeyListener(this.obj);
   }
 
   public void draw(Graphics g){

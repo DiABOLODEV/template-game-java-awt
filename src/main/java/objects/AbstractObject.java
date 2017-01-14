@@ -4,8 +4,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public abstract class AbstractObject{
+public abstract class AbstractObject implements KeyListener{
 
   protected Point position; // position de l'objet dans l'espace carthésien
   protected Point speed; // vitesse de l'objet
@@ -118,5 +120,10 @@ public abstract class AbstractObject{
 	public void setZindex(int zindex) {
 		this.zindex = zindex;
 	}
+  
+  /* Key listener */
+  public void keyPressed(KeyEvent arg0) {}
+  public void keyReleased(KeyEvent arg0) {}
+  public void keyTyped(KeyEvent arg0) {}
 
 }
